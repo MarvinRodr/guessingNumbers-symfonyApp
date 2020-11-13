@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entrvista Gdoce - MarvinRodr{% endblock %}
+
+{% block body %}
+
+<img class="wave" src="{{ asset('assets/img/wave.png') }}">
+<div class="container">
+    <div class="img">
+		<img src="{{ asset('assets/img/bg.svg') }}">
+	</div>
+    <div class="login-content">
+    <form name="guesser" method="post">
+        <img src="{{ asset('assets/img/avatar.svg') }}">
+		<h2 class="title">Adivino tu número?</h2>
+        
+        
+            <div class="input-div pass">
+                <div class="i"> 
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="div">
+                    <h5>Número a adivinar</h5>
+                    <input type="password" name="guesser[userNumber]" required="required" class="input">
+                </div>
+            </div>
+            
+            <div class="input-div ">
+                <div class="i">
+                    <i class="fas fa-angle-double-right"></i>
+           		</div>
+                <div class="div">
+                                    <h5>{{ message }}</h5>
+                                    <input type="text" class="input" disabled >
+                </div>
+            </div>
+            <button type="submit" class="btn"  name="guesser[submit]">¿Adivinar?</button>
+    </form>
+    </div>
+</div>
+{% endblock %}
