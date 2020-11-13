@@ -48,12 +48,12 @@ class GuessController extends AbstractController
         ]);
     }
 
-    function check ($array) {                           // Mi estrategia aquí es que en lugar de iterar sobre el número completo
-        $newArray       = [];                                 // iteramos sobre cada digito, inicializando en 0 cada digito del nuevo array e
-        $guessedNumber  = 0;                             // incrementando sus digitos hasta dar con uno igual que el mismo dígito 
-        $itFOR          = 0;                                     // y en la misma posición que el original.
-        $itWhile        = 0;                                   // Con esto conseguimos que en lugar de iterar millones de veces sólo iteramos como máximo 
-        for ($i=0; $i < count($array); $i++) {          // La funcion de iteraciones es : (nIteraciones = nDigitos * 10)
+    function check ($array) {                       // Mi estrategia aquí es que en lugar de iterar sobre el número completo
+        $newArray       = [];                       // iteramos sobre cada digito, inicializando en 0 cada digito del nuevo array e
+        $itFOR          = 0;                        // incrementando sus digitos hasta dar con uno igual que el mismo dígito
+        $itWhile        = 0;                        // y en la misma posición que el original.
+                                                    // Con esto conseguimos no iterar millones de veces
+        for ($i=0; $i < count($array); $i++) {      // La funcion de iteraciones es : (nIteraciones = nDigitos * 10)
             $newArray[$i] = 0;     
             $itFOR ++;                     
             while ($newArray[$i] != $array[$i]) {
