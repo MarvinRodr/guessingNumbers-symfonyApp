@@ -13,7 +13,7 @@ An application that guesses an entered number by efficiently iterating over each
 
 ## Technologies
 ***
-A list of technologies used within the project:
+A list of technologies used on the project:
 * [Symfony](https://example.com): Version 5 
 ## Installation
 ***
